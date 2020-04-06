@@ -8,10 +8,10 @@ class Background {
 
 //Game Border - make border dynamic based on dot size?
     drawBorder() {
-        line(50, 50, 50, 750)
-        line(50, 50, 750, 50)
-        line(750, 50, 750, 750)
-        line(50, 750, 750, 750)
+        line(0, 0, 0, 900)
+        line(0, 0, 900, 0)
+        line(900, 0, 900, 900)
+        line(0, 900, 900, 900)
         
     }
 
