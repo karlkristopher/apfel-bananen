@@ -1,17 +1,16 @@
-let dots = [];
-console.log(dots)
+//let dots = [];
 //question - why does dots populate on line 32 but not 2?
 
-class Dot {
+/* class Dot {
 
     constructor(x, y) {
         this.x = x;
         this.y = y;
         this.clicked = false;
         
-    }
+    } */
 
-    setup(col, row){
+    /* setup(col, row){
         let dotSetup = [];
         for (let i = 0; i <= col; i++) {
             dotSetup[i] = [];
@@ -31,9 +30,31 @@ class Dot {
 
         console.log(dots)
         
+    } */
+
+    //Alternate dot maker:
+
+/*     setupAlt () {
+    for(let x = 180; x <= 720; x+=180) {
+        dots.push(new Dot(this.x = x, this.y = 180)
+    }
+
+    for(let x = 180; x <= 720; x+=180) {
+        dots.push(new Dot(this.x = x, this.y = 360)
+    }
+
+    for(let x = 180; x <= 720; x+=180) {
+        dots.push(new Dot(this.x = x, this.y = 540)
+    }
+
+    for(let x = 180; x <= 720; x+=180) {
+        dots.push(new Dot(this.x = x, this.y = 720)
     }
 
 
+    } */
+    
+/* 
     display () {
         dots.forEach(ele => {
             let c = color(0, 0, 0); //question - how can I put this in constants?
@@ -50,3 +71,4 @@ class Dot {
   
 }
 
+ */

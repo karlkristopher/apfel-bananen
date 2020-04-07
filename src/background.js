@@ -1,7 +1,7 @@
 //Constants
 
 const colWidth = 100; //Column Width
-const dotDiameter = 20;
+const dotDiameter = 30;
 
 
 class Background {

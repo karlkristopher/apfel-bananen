@@ -1,4 +1,4 @@
-class Boxes {
+/* class Boxes {
 
     constructor (x1, y1, img) {
         this.x1 = x;
@@ -8,10 +8,14 @@ class Boxes {
 
     }
 
+    setup () {
+
+    }
+
 
     display() {
 
-    }
+    } */
 
 
         /*
@@ -22,4 +26,4 @@ class Boxes {
         test for closed box (true/false)
         */
   
-    }
+  /*   } */
