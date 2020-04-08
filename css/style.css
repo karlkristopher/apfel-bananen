@@ -1,9 +1,22 @@
 body {
     font-size: 2em;
+    display: flex;
+	flex-direction: column;
+    align-items: center;
+    font-family: monospace;
+   
 }
 
-.sideinfo {
-    color: red;
-    display: flex;
-    
+h1 {
+    text-align: center;
 }
+
+section > p {
+    width: 1100px;
+    text-align: justify;
+}
+
+.gamecontent {
+    display: flex;padding-bottom: 100px;
+    background-color: red;
+  }

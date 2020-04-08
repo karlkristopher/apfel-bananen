@@ -15,6 +15,7 @@ class Lines {
 
     display() {
         lineDisplay.forEach(ele => {
+            strokeWeight(4); 
             line(ele.x1, ele.y1, ele.x2, ele.y2);
         })
         

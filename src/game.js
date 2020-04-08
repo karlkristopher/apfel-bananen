@@ -20,9 +20,12 @@ class Box {
     }
 
     display (){
+        //image(this.player2img, 0, 0)
+    
 
         if(this.fullBoxP1 === true){
             console.log('player 1 point')
+            
             image(this.player1img, this.x, this.y, 160)
         }
 
@@ -41,11 +44,17 @@ class Box {
 
 
 class Game {
+
+    constructor () {
+        this.start = true;
+
+    }
+
     init () {
         this.background = new Background();
-            //Question - why does lines need to be preloaded if they are being added after the game loads?
         this.lines = new Lines();
         this.box = new Box();
+    
         
     }
 
@@ -77,6 +86,22 @@ class Game {
         clear();
         this.box.display();
         this.background.drawBorder();
+      
+        boxes.forEach(ele => {
+            console.log(ele)
+            if(ele.fullBoxP1 === true) {
+                image(ele.player1img, (ele.x - 92), (ele.y - 92), 190, 190);
+                
+
+            }
+
+            if(ele.fullBoxP2 === true) {
+                image(ele.player2img, (ele.x - 75), (ele.y - 75), 150, 150);
+                
+            }
+
+
+        })
 
 
         //Display Dots

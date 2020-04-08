@@ -6,37 +6,46 @@
     <link rel="stylesheet" href="css/style.css" />
     <title>Dots & Boxes</title>
 </head>
-<body>
-    <div>
+<body >
+    <header>
         <h1>Apples & Bananas (aka la pipopipette)</h1>
-    </div>
-    <div >
-        <div>
+    <header>
+    
+    <div>
+
+        <section >
             <table>
                 <tr>
-                  <th>Score</th>
+                    <th>Score</th>
                 </tr>
                 <tr>
                     <th>Apples:</th>
-                    <th>Apple Score</th>
+                    <th class = appleScore>0</th>
                 </tr>
                 <tr>
                     <th>Bananas:</th>
-                    <th>Bananas Score</th>
+                    <th class = bananaScore>0</th>
                 </tr>
-              </table>
-              <div>
-                  <div>
-                    Player Turn: 
-                  </div>
-                  <div #playerturn>
-                    
-                  </div>
-                  
-              </div>
-        </div>
-        <div id="canvas"></div>
+            </table>
+
+            <div>
+                <div>Player Turn: </div>
+                <div #playerturn></div>
+                        
+            </div>
+        </section>
+
+        <section>
+            <div id="canvas"></div>
+        </section>
+
+        <section>
+            <p><i><strong>'la pipopipette'</strong></i> was originally created by 19th century French mathematician <a href="https://en.wikipedia.org/wiki/%C3%89douard_Lucas" target="_blank">Édouard&nbspLucas</a>. He was also known for his stufy of the Fibonacci sequence, among other things.</p>
+        </section>
+
     </div>
+        
+    
     
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.min.js"></script>

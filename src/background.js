@@ -1,17 +1,23 @@
 //Constants
 
 const colWidth = 100; //Column Width
-const dotDiameter = 30;
+const dotDiameter = 28;
 
 
 class Background {
 
 //Game Border - make border dynamic based on dot size?
     drawBorder() {
-        line(0, 0, 0, 900)
-        line(0, 0, 900, 0)
-        line(900, 0, 900, 900)
-        line(0, 900, 900, 900)
+        strokeWeight(7); 
+        line(0, 55, 0, 1100);
+        strokeWeight(5); 
+        line(0, 50, 900, 50);
+        strokeWeight(7); 
+        line(900, 55, 900, 1100);
+        strokeWeight(7); 
+        line(0, 1100, 1000, 1100);
+        strokeWeight(3); 
+        line(100, 870, 800, 870);
         
     }
 
