@@ -16,7 +16,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(900, 1100);
+  createCanvas(540, 660);
 
   game.setup();
 }
@@ -33,16 +33,6 @@ function draw() {
 
 function mousePressed() {
 
-  if(player1Score + player2Score === 1){
-    lineDisplay = [];
-    scoredBox = [];
-    clicks = [];
-    player1Turn = true;
-    player1Score = 0;
-    player2Score = 0;
-  }
-
-
   //Draw Line
 
 
@@ -57,7 +47,7 @@ dots1.forEach(function (dot, index) {
     }
     if (clicks.length === 2) {
       let lineDistance = dist(clicks[0].x, clicks[0].y, clicks[1].x, clicks[1].y);
-      if((clicks[0].x === clicks[1].x && clicks[0].y === clicks[1].y) || lineDistance > 180 ) {
+      if((clicks[0].x === clicks[1].x && clicks[0].y === clicks[1].y) || lineDistance > 108 ) {
 
         return clicks = [];
       } else
@@ -80,7 +70,7 @@ function midpointCheck(midPointX, midPointY) {
   let boxCount = 0;
 
   boxes.forEach(function (box) {
-    let lineDistance = 90;
+    let lineDistance = 54;
     let d = dist(midPointX, midPointY, box.x, box.y);
       if(d === lineDistance) {
         box.lineCount++;

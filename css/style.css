@@ -1,9 +1,14 @@
 body {
-    font-size: 1.8em;
     display: flex;
 	flex-direction: column;
     align-items: center;
     font-family: monospace;
+
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
    
 }
 
@@ -12,16 +17,14 @@ a {
 }
 
 h1 {
+    font-size: 1.5rem;
     text-align: center;
 }
 
-p {
-    font-size: 23px;
-}
-
 section > p {
-    width: 1120px;
+    width: 600px;
     text-align: justify;
+
 }
 
 .gamecontent {

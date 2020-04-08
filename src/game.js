@@ -24,11 +24,11 @@ class Box {
     
 
         if(this.fullBoxP1 === true){            
-            image(this.player1img, this.x, this.y, 160)
+            image(this.player1img, this.x, this.y, 96)
         }
 
         if(this.fullBoxP2 = true){
-            image(this.player2img, this.x, this.y, 160)
+            image(this.player2img, this.x, this.y, 96)
         }
 
         score.draw();
@@ -61,23 +61,23 @@ class Game {
     setup () {
 
             //Extra row of column but should not matter right now.
-            for(let x = 180; x <= 720; x+=180) {
-                dots1.push(new Dot(this.x = x, this.y = 180))
-                boxes.push(new Box(this.x = x + 90, this.y = 270))
+            for(let x = 108; x <= 432; x+=108) {
+                dots1.push(new Dot(this.x = x, this.y = 108))
+                boxes.push(new Box(this.x = x + 54, this.y = 162))
             }
         
-            for(let x = 180; x <= 720; x+=180) {
-                dots1.push(new Dot(this.x = x, this.y = 360))
-                boxes.push(new Box(this.x = x + 90, this.y = 450))
+            for(let x = 108; x <= 432; x+=108) {
+                dots1.push(new Dot(this.x = x, this.y = 216))
+                boxes.push(new Box(this.x = x + 54, this.y = 270))
             }
         
-            for(let x = 180; x <= 720; x+=180) {
-                dots1.push(new Dot(this.x = x, this.y = 540))
-                boxes.push(new Box(this.x = x + 90, this.y = 630))
+            for(let x = 108; x <= 432; x+=108) {
+                dots1.push(new Dot(this.x = x, this.y = 324))
+                boxes.push(new Box(this.x = x + 54, this.y = 378))
             }
         
-            for(let x = 180; x <= 720; x+=180) {
-                dots1.push(new Dot(this.x = x, this.y = 720))
+            for(let x = 108; x <= 432; x+=108) {
+                dots1.push(new Dot(this.x = x, this.y = 432))
             }
 
             score = new Score();
@@ -92,13 +92,13 @@ class Game {
         boxes.forEach(ele => {
             
             if(ele.fullBoxP1 === true) {
-                image(ele.player1img, (ele.x - 92), (ele.y - 92), 190, 190);
+                image(ele.player1img, (ele.x - 55), (ele.y - 55), 114, 114);
                 
 
             }
 
             if(ele.fullBoxP2 === true) {
-                image(ele.player2img, (ele.x - 75), (ele.y - 75), 150, 150);   
+                image(ele.player2img, (ele.x - 45), (ele.y - 45), 90, 90);   
             }
         })
 

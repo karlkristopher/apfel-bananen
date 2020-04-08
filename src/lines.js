@@ -7,15 +7,15 @@ class Lines {
         this.y1 = y1;
         this.x2 = x2;
         this.y2 = y2;
-        this.midPointX = (this.x1 === this.x2) ? this.x1 : (this.x2 > this.x1) ? (this.x2 - 90) : (this.x1 - 90);
-        this.midPointY = (this.y1 === this.y2) ? this.y1 : (this.y2 > this.y1) ? (this.y2 - 90) : (this.y1 - 90);
+        this.midPointX = (this.x1 === this.x2) ? this.x1 : (this.x2 > this.x1) ? (this.x2 - 54) : (this.x1 - 54);
+        this.midPointY = (this.y1 === this.y2) ? this.y1 : (this.y2 > this.y1) ? (this.y2 - 54) : (this.y1 - 54);
         
 
     }
 
     display() {
         lineDisplay.forEach(ele => {
-            strokeWeight(4); 
+            strokeWeight(2); 
             line(ele.x1, ele.y1, ele.x2, ele.y2);
         })
         
