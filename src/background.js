@@ -16,7 +16,7 @@ class Background {
         line(900, 55, 900, 1100);
         strokeWeight(7); 
         line(0, 1100, 1000, 1100);
-        strokeWeight(3); 
+        strokeWeight(1); 
         line(100, 870, 800, 870);
         
     }

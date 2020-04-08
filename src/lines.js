@@ -25,7 +25,6 @@ class Lines {
             
             lineDisplay.push(new Lines(x1, y1, x2, y2));
             midpointCheck(lineDisplay[lineDisplay.length-1].midPointX, lineDisplay[lineDisplay.length-1].midPointY);
-            console.log(`is it player 1 turn? ${player1Turn}`)
             }
         
 

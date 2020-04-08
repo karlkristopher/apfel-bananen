@@ -23,15 +23,15 @@ class Box {
         //image(this.player2img, 0, 0)
     
 
-        if(this.fullBoxP1 === true){
-            console.log('player 1 point')
-            
+        if(this.fullBoxP1 === true){            
             image(this.player1img, this.x, this.y, 160)
         }
 
         if(this.fullBoxP2 = true){
             image(this.player2img, this.x, this.y, 160)
         }
+
+        score.draw();
 
        /*  if(player1Turn = true){
             document.getElementsById("playerturn").innerHTML = 'hi'
@@ -79,6 +79,8 @@ class Game {
             for(let x = 180; x <= 720; x+=180) {
                 dots1.push(new Dot(this.x = x, this.y = 720))
             }
+
+            score = new Score();
     }
     
 
@@ -88,7 +90,7 @@ class Game {
         this.background.drawBorder();
       
         boxes.forEach(ele => {
-            console.log(ele)
+            
             if(ele.fullBoxP1 === true) {
                 image(ele.player1img, (ele.x - 92), (ele.y - 92), 190, 190);
                 
@@ -96,11 +98,8 @@ class Game {
             }
 
             if(ele.fullBoxP2 === true) {
-                image(ele.player2img, (ele.x - 75), (ele.y - 75), 150, 150);
-                
+                image(ele.player2img, (ele.x - 75), (ele.y - 75), 150, 150);   
             }
-
-
         })
 
 

@@ -2,12 +2,13 @@ const game = new Game();
 
 const dots1 = [];
 const boxes = [];
-const lineDisplay = [];
+let lineDisplay = [];
 let scoredBox = [];
 let clicks = [];
 let player1Turn = true;
 let player1Score = 0;
 let player2Score = 0;
+let score;
 
 
 function preload() {
@@ -32,6 +33,15 @@ function draw() {
 
 function mousePressed() {
 
+  if(player1Score + player2Score === 1){
+    lineDisplay = [];
+    scoredBox = [];
+    clicks = [];
+    player1Turn = true;
+    player1Score = 0;
+    player2Score = 0;
+  }
+
 
   //Draw Line
 
@@ -47,9 +57,7 @@ dots1.forEach(function (dot, index) {
     }
     if (clicks.length === 2) {
       let lineDistance = dist(clicks[0].x, clicks[0].y, clicks[1].x, clicks[1].y);
-      console.log(lineDistance)
       if((clicks[0].x === clicks[1].x && clicks[0].y === clicks[1].y) || lineDistance > 180 ) {
-        console.log(lineDistance)
 
         return clicks = [];
       } else
@@ -84,22 +92,22 @@ function midpointCheck(midPointX, midPointY) {
       if(box.lineCount === 4 && scoredBox.indexOf(box) === -1) {
 
         if(boxCount === 2){
-          console.log('box count is 1')
         }
-        //console.log(box)
-        //console.log(scoredBox);
+    
         scoredBox.push(box);
 
         if(player1Turn === true && boxCount ===1) {
           
           box.fullBoxP2 = true;
           player2Score++
+         // score.bananaScore++
           boxCount++;  
           console.log('player 1 round 2')
           return player1Turn = true;
           } else if (player1Turn === false && boxCount === 1) {
           box.fullBoxP1 = true;
           player1Score++;
+        //  score.appleScore++
           boxCount++;
           console.log('player 2 round 2')
            return player1Turn = false; 
@@ -108,6 +116,7 @@ function midpointCheck(midPointX, midPointY) {
         if(player1Turn === true) {
         box.fullBoxP1 = true;
         player1Score++
+       // score.appleScore++
         console.log('player 1 round 1')
         boxCount++;
 
@@ -115,6 +124,7 @@ function midpointCheck(midPointX, midPointY) {
         } else
         box.fullBoxP2 = true;
         player2Score++;
+      //  score.bananaScore++
         console.log('player 2 round 1')
         boxCount++;
 
@@ -122,8 +132,7 @@ function midpointCheck(midPointX, midPointY) {
         return player1Turn = true;
       }
   });
-  console.log(boxCount)
-  console.log(`player1score: ${player1Score} player2score: ${player2Score} `)
+
 
   
   return player1Turn = !player1Turn;
