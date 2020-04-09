@@ -22,7 +22,6 @@ function setup() {
 
 function draw() {
   game.display();
-  console.log(boxes[0])
   
 }
 
