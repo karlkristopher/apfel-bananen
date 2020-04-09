@@ -19,7 +19,7 @@ class Score {
 
         //Turn
 
-        if (player1Score + player2Score === 1) {
+        if (player1Score + player2Score === 9) {
             if(player1Score > player2Score) {
                 textSize(30)
             text(`Äpfel  Win`, this.winX, this.winY+13)
