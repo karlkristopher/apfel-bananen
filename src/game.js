@@ -95,11 +95,20 @@ class Game {
 
 
         //Display Dots
+        
         dots1.forEach(ele => {
             let c = color(0, 0, 0);
             fill(c);
             circle(ele.x, ele.y, dotDiameter)
         }); 
+
+        clicks.forEach(click =>{
+            let c = color(0, 0, 0);
+            fill(c);
+            circle(click.x, click.y, dotDiameter+4)
+
+
+        })
 
         this.lines.display();
         
