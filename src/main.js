@@ -22,15 +22,21 @@ function setup() {
 
 function draw() {
   game.display();
+  console.log(boxes[0])
   
 }
 
 function mousePressed() {
 
   //Game Reset
-  let resetClickD = dist(mouseX, mouseY, 120, 600);
-  if((player1Score + player2Score === 9) && (resetClickD < 100)) {
-    boxes = [];
+  let resetClickD = dist(mouseX, mouseY, 85, 637);
+  
+  if(resetClickD < 25) {
+    boxes.forEach(box => {
+    box.fullBoxP1 = false;
+    box.fullBoxP2 = false;
+    box.lineCount = 0;
+    })
     lineDisplay = [];
     scoredBox = [];
     clicks = [];

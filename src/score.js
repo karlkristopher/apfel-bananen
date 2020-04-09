@@ -19,26 +19,29 @@ class Score {
 
         //Turn
 
-        if (player1Score + player2Score === 9) {
+        if (player1Score + player2Score === 1) {
             if(player1Score > player2Score) {
                 textSize(30)
-            text(`Äpfel  Win`, this.winX, this.winY)
-            textSize(22)
-            text('Click Here to Play Again', this.winX, this.winY + 20, 200, 60)
+            text(`Äpfel  Win`, this.winX, this.winY+13)
+           // text('Click Here to Play Again', this.winX, this.winY + 20, 200, 60)
             }
 
             if(player1Score < player2Score) {
                 textSize(30)
-                text(`Bananen Win`, this.winX, this.winY)
-                textSize(22)
-                text('Click Here to Play Again', this.winX, this.winY + 20, 200, 60)
+                text(`Bananen Win`, this.winX, this.winY+13)
+               // text('Click Here to Play Again', this.winX, this.winY + 20, 200, 60)
             }} else
 
         if(player1Turn === true) {
+            textSize(24)
            text('Turn: Äpfel', 60, 576)
         } else {
+            textSize(24)
             text('Turn: Bananen', 60, 576)
         }
+
+        textSize(15)
+        text('=> Reset', this.winX, this.winY + 60, 200, 60)
         
     }
 }
