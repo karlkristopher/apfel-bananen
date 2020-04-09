@@ -24,6 +24,9 @@ h1 {
     margin-bottom: 8px;
 }
 
+span {
+    font-size: 1.3rem
+}
 
 
 aside {
@@ -37,6 +40,8 @@ aside > p {
     text-align: justify;
     padding-top: 13px;
     margin: 0;
+    line-height: 1.05rem;
+    
 
 
 }

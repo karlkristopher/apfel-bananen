@@ -1,7 +1,7 @@
 const game = new Game();
 
-const dots1 = [];
-const boxes = [];
+let dots1 = [];
+let boxes = [];
 let lineDisplay = [];
 let scoredBox = [];
 let clicks = [];
@@ -27,12 +27,25 @@ function draw() {
 
 function mousePressed() {
 
+  //Game Reset
+  let resetClickD = dist(mouseX, mouseY, 120, 600);
+  if((player1Score + player2Score === 9) && (resetClickD < 100)) {
+    boxes = [];
+    lineDisplay = [];
+    scoredBox = [];
+    clicks = [];
+    player1Turn = true;
+    player1Score = 0;
+    player2Score = 0;
+  }
 
 
+
+  //Manage Clicked Dots
 dots1.forEach(function (dot, index) {
-    let d = dist(mouseX, mouseY, dots1[index].x, dots1[index].y);
-    
 
+    //Temporarily Store Clicked Dots
+    let d = dist(mouseX, mouseY, dots1[index].x, dots1[index].y);
     if (d < dotDiameter && clicks.length === 0) {
       clicks.push({ x: dots1[index].x, y: dots1[index].y });
     } else if (d < dotDiameter) {
@@ -129,7 +142,6 @@ function midpointCheck(midPointX, midPointY) {
   });
 
 
-  
   return player1Turn = !player1Turn;
 
 

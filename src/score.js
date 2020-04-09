@@ -7,17 +7,9 @@ class Score {
     }
 
     draw () {
-
-
-   
-
-            textFont('monospace')
-
-            
-            
-
+        textFont('monospace')
          //Apple Score
-        let scoreText = `Apples Bananas `
+        let scoreText = `Äpfel  Bananen `
         textSize(24)
         text(scoreText, this.scoreTextX, this.scoreTextY, 108, 120);
 
@@ -30,22 +22,22 @@ class Score {
         if (player1Score + player2Score === 9) {
             if(player1Score > player2Score) {
                 textSize(30)
-            text(`Apples Win`, this.winX, this.winY)
+            text(`Äpfel  Win`, this.winX, this.winY)
             textSize(22)
-            text('Refresh Page to Play Again', this.winX, this.winY + 20, 200, 60)
+            text('Click Here to Play Again', this.winX, this.winY + 20, 200, 60)
             }
 
             if(player1Score < player2Score) {
                 textSize(30)
-                text(`Bananas Win`, this.winX, this.winY)
+                text(`Bananen Win`, this.winX, this.winY)
                 textSize(22)
-                text('Refresh Page to Play Again', this.winX, this.winY + 20, 200, 60)
+                text('Click Here to Play Again', this.winX, this.winY + 20, 200, 60)
             }} else
 
         if(player1Turn === true) {
-           text('Turn: Apple', 60, 576)
+           text('Turn: Äpfel', 60, 576)
         } else {
-            text('Turn: Banana', 60, 576)
+            text('Turn: Bananen', 60, 576)
         }
         
     }
