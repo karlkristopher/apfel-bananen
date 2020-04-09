@@ -3,7 +3,6 @@ class Dot {
     constructor(x, y) {
         this.x = x;
         this.y = y;
-        this.clicked = false;
 
     }}
 
@@ -19,8 +18,9 @@ class Box {
         this.lineCount = 0;
     }
 
+    
+
     display (){
-        //image(this.player2img, 0, 0)
     
 
         if(this.fullBoxP1 === true){            
@@ -32,13 +32,6 @@ class Box {
         }
 
         score.draw();
-
-       /*  if(player1Turn = true){
-            document.getElementsById("playerturn").innerHTML = 'hi'
-        } */
-    
-
-        //Can winning image go here?
     }
 }
 
@@ -46,8 +39,6 @@ class Box {
 class Game {
 
     constructor () {
-        this.start = true;
-
     }
 
     init () {
@@ -60,7 +51,6 @@ class Game {
 
     setup () {
 
-            //Extra row of column but should not matter right now.
             for(let x = 108; x <= 432; x+=108) {
                 dots1.push(new Dot(this.x = x, this.y = 108))
                 boxes.push(new Box(this.x = x + 54, this.y = 162))
@@ -81,6 +71,7 @@ class Game {
             }
 
             score = new Score();
+            
     }
     
 
@@ -88,24 +79,24 @@ class Game {
         clear();
         this.box.display();
         this.background.drawBorder();
-      
+
+      //Display Apple/Banana Image
         boxes.forEach(ele => {
+        if(ele.fullBoxP1 === true) {
+            image(ele.player1img, (ele.x - 55), (ele.y - 55), 114, 114);
             
-            if(ele.fullBoxP1 === true) {
-                image(ele.player1img, (ele.x - 55), (ele.y - 55), 114, 114);
-                
 
-            }
+        }
 
-            if(ele.fullBoxP2 === true) {
-                image(ele.player2img, (ele.x - 45), (ele.y - 45), 90, 90);   
-            }
+        if(ele.fullBoxP2 === true) {
+            image(ele.player2img, (ele.x - 45), (ele.y - 45), 90, 90);   
+        }
         })
 
 
         //Display Dots
         dots1.forEach(ele => {
-            let c = color(0, 0, 0); //question - how can I put this in constants?
+            let c = color(0, 0, 0);
             fill(c);
             circle(ele.x, ele.y, dotDiameter)
         }); 

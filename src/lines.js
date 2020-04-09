@@ -21,21 +21,10 @@ class Lines {
         
     }
 
-    newLine (x1, y1, x2, y2){
-            
+    newLine (x1, y1, x2, y2){            
             lineDisplay.push(new Lines(x1, y1, x2, y2));
             midpointCheck(lineDisplay[lineDisplay.length-1].midPointX, lineDisplay[lineDisplay.length-1].midPointY);
             }
-        
-
     
 }
-
-
-
-//Things to consider
-//does line exist? - store all lines in an array and cross reference
-//is it adjacent? 
-//is it not diagonal? - should be able to do these two with an if statement with a minimum line length
-//What player drew the line?
 

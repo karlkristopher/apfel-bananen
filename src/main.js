@@ -17,23 +17,16 @@ function preload() {
 
 function setup() {
   createCanvas(540, 660);
-
   game.setup();
 }
 
 function draw() {
-  if (game.start) {
   game.display();
-  } else{
-    fill("green");
-  }
-
-
+  
 }
 
 function mousePressed() {
 
-  //Draw Line
 
 
 dots1.forEach(function (dot, index) {
@@ -42,12 +35,34 @@ dots1.forEach(function (dot, index) {
 
     if (d < dotDiameter && clicks.length === 0) {
       clicks.push({ x: dots1[index].x, y: dots1[index].y });
-    } else if (d < dotDiameter /*&& ADD DISTANCE PARAMETER HERE*/) {
+    } else if (d < dotDiameter) {
       clicks.push({ x: dots1[index].x, y: dots1[index].y });
     }
+
     if (clicks.length === 2) {
+
+      let duplicateLineCheck = function (c1x, c2x, c1y, c2y) {
+        let duplicate = false;
+
+        let clickMidPointX = (c1x === c2x) ? c1x : (c2x > c1x) ? (c2x - 54) : (c1x - 54);
+        let clickMidPointY = (c1y === c2y) ? c1y : (c2y > c1y) ? (c2y - 54) : (c1y - 54);
+        lineDisplay.forEach(line => {
+          if(clickMidPointX === line.midPointX && clickMidPointY === line.midPointY) {
+            duplicate = true;
+          }
+        })
+      
+        if(duplicate === true) {
+          return true;
+        } else {
+          return false;
+        }
+
+      } 
+
+      //Stops duplicate lines, allows for only vertical/horizontal lines, allows for proper length of line, prevents double clicking on one dot
       let lineDistance = dist(clicks[0].x, clicks[0].y, clicks[1].x, clicks[1].y);
-      if((clicks[0].x === clicks[1].x && clicks[0].y === clicks[1].y) || lineDistance > 108 ) {
+      if((clicks[0].x === clicks[1].x && clicks[0].y === clicks[1].y) || lineDistance > 108 || duplicateLineCheck(clicks[0].x, clicks[1].x, clicks[0].y, clicks[1].y)) {
 
         return clicks = [];
       } else
@@ -57,6 +72,7 @@ dots1.forEach(function (dot, index) {
         clicks[1].x,
         clicks[1].y
       );
+
       clicks = [];
     }
   });
@@ -81,41 +97,30 @@ function midpointCheck(midPointX, midPointY) {
 
       if(box.lineCount === 4 && scoredBox.indexOf(box) === -1) {
 
-        if(boxCount === 2){
-        }
-    
         scoredBox.push(box);
 
         if(player1Turn === true && boxCount ===1) {
           
           box.fullBoxP2 = true;
           player2Score++
-         // score.bananaScore++
           boxCount++;  
-          console.log('player 1 round 2')
           return player1Turn = true;
           } else if (player1Turn === false && boxCount === 1) {
           box.fullBoxP1 = true;
           player1Score++;
-        //  score.appleScore++
           boxCount++;
-          console.log('player 2 round 2')
            return player1Turn = false; 
           }
 
         if(player1Turn === true) {
         box.fullBoxP1 = true;
         player1Score++
-       // score.appleScore++
-        console.log('player 1 round 1')
         boxCount++;
 
         return player1Turn = false;
         } else
         box.fullBoxP2 = true;
         player2Score++;
-      //  score.bananaScore++
-        console.log('player 2 round 1')
         boxCount++;
 
 
