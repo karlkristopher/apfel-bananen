@@ -22,4 +22,4 @@
 - <a href="https://karlkristopher.github.io/apfel-bananen/" target="_blank">Click here to see deployed game.</a>
 
 ### Demo
-<img src="https://res.cloudinary.com/karlkris/image/upload/v1589710799/github/ab_demo_xrd1q1.gif" alt="Äpfel & Bananen Demo" width="40%"  />
+<img src="https://res.cloudinary.com/karlkris/image/upload/v1589711135/github/ab_demo_xtvcjn.gif" alt="Äpfel & Bananen Demo" width="40%"  />
