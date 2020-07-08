@@ -25,4 +25,4 @@
 
 ## How to Run Locally
 - Clone Repo + Open Project Files
-- Open *index.html* with Live Server
+- Open **index.html** with Live Server
