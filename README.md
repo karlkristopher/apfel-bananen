@@ -24,5 +24,5 @@
 <img src="https://res.cloudinary.com/karlkris/image/upload/v1589711135/github/ab_demo_xtvcjn.gif" alt="Äpfel & Bananen Demo" width="40%"  />
 
 ## How to Run Locally
-- Clone Repo + Open Project Files
-- Open **index.html** with Live Server
+- Clone project
+- Open **index.html** off root folder in your browser.
