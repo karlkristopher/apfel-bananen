@@ -2,7 +2,7 @@
 
 # Äpfel & Bananen
 
->A two-person logic game built in p5.js.
+- A two-person logic game built in p5.js.
 
 ## About the Game
 - Äpfel & Bananen is better known as <strong>la pipopipette,</strong></i> originally created by 19th century French mathematician
